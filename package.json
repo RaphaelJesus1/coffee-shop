@@ -1,6 +1,7 @@
 {
   "name": "coffee-shop",
   "version": "0.1.0",
+  "author": "Raphael Menezes, Taís Orsini and Thiago Miotti",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
