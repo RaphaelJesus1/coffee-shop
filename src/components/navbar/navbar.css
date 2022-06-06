@@ -5,6 +5,14 @@
     padding: 0;
 }
 
+.navbar-container-anchor{
+    max-width: 100vw;
+    height: 80px;
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+}
+
 .navbar{
     height: 80px;
     width: 100vw;
@@ -13,7 +21,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    
+    position: fixed;
+    position: -webkit-sticky;
+    top: 0;
 }
 
 .title{
@@ -62,8 +72,16 @@
 }
 
 .cart-button:hover{
-    background-color: #66D2CF;
+    background-color: #55b1ae;
 }
+
+.cart-badge{
+    margin-left: 0.6rem;
+    padding: 0.25rem 0.6rem;
+    background-color: #51b3b0;
+    border-radius: 10px;
+}
+
 
 
 

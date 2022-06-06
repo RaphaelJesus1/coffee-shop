@@ -3,7 +3,7 @@ import "./about.css";
 
 const about = () => {
   return (
-    <div className="container">
+    <div className="container-about">
         <div className="title-about">
             <h1> Great coffee <br/> made simple.</h1>
             <p>Start your mornings with the world’s best coffees. Try our <br/> expertly curated artisan 
