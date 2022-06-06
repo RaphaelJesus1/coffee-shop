@@ -2,3 +2,21 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+  margin: 0;
+  font-family: "Barlow", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+button[disabled],
+button[disabled]:hover {
+  background-color: #bbb !important;
+  cursor: not-allowed !important;
+}

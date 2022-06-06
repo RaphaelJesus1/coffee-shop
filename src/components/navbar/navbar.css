@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:opsz,wght@9..144,900&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-container-anchor{
@@ -26,53 +24,53 @@
     top: 0;
 }
 
-.title{
-    margin-left: 50px;
-    color: #333D4B;
-    font-family:'Fraunces', serif;
-    font-size: 25px;
+.title {
+  margin-left: 50px;
+  color: #333d4b;
+  font-family: "Fraunces", serif;
+  font-size: 25px;
 }
 
-.content{
-    margin-right: 50px; 
-    display: flex;
-    align-items: center;
+.content {
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
 }
 
-.content a{
-    text-decoration: none;
-    margin: 15px;
-    color: #83888F;
-    font-family: 'Barlow', sans-serif;
-    font-size: 15px;
+.content a {
+  text-decoration: none;
+  margin: 15px;
+  color: #83888f;
+  font-family: "Barlow", sans-serif;
+  font-size: 15px;
 }
 
-.content a:hover{
-    text-decoration: underline;
+.content a:hover {
+  text-decoration: underline;
 }
 
-.cart-button{
-    padding: 5px 40px;
-    border: none;
-    border-radius: 10px;
-    font-family: 'Barlow', sans-serif;
-    font-size: 15px;
-    color: #ffff;
-    background-color: #0E8784;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+.cart-button {
+  padding: 5px 40px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Barlow", sans-serif;
+  font-size: 15px;
+  color: #ffff;
+  background-color: #0e8784;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-.icon{
-    width: 1.35rem;
-    height: 1.35rem;
-    margin-right: 0.5rem;
-    color: #ffff;
+.icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-right: 0.5rem;
+  color: #ffff;
 }
 
 .cart-button:hover{
-    background-color: #55b1ae;
+    background-color: #66d2cf;
 }
 
 .cart-badge{

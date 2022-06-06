@@ -1,8 +1,8 @@
 import React from "react";
-import Carticon from "../../components/navbar/cart/cart-icon";
+import Carticon from "../../assets/icons/cart-icon";
 import "./navbar.css";
 
-const navbar = () => {
+const navbar = (props) => {
   return (
     <div className="navbar-container-anchor">
       <div className="navbar">
@@ -14,7 +14,8 @@ const navbar = () => {
           <a href="#">About Us</a>
 
           <div className="cart">
-            <button className="cart-button">
+            <button className="cart-button"
+             onClick={() => props.setIsModalOpen && props.setIsModalOpen(true)}>
               <span className="icon">
                 <Carticon />
               </span>
@@ -22,8 +23,8 @@ const navbar = () => {
               <span className="cart-badge">0</span>
             </button>
           </div>
-        </div>
       </div>
+    </div>
     </div>
   );
 };
