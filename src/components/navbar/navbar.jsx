@@ -20,7 +20,7 @@ const navbar = (props) => {
                 <Carticon />
               </span>
               <span className="title-cart">Cart</span>
-              <span className="cart-badge">0</span>
+              <span className="cart-badge">{props.numberOfItems}</span>
             </button>
           </div>
       </div>

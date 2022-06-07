@@ -12,7 +12,7 @@ const Card = (props) => {
       <h3>{props.name}</h3>
       <h4>{props.description}</h4>
       <h5>R${props.price}</h5>
-      <button><AiOutlineShopping style={{marginRight:"5px"}}/> Adicionar</button>
+      <button onClick={props.onClickButton}><AiOutlineShopping style={{marginRight:"5px"}}/> Adicionar</button>
     </div>
   );
 };

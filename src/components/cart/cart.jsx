@@ -42,14 +42,16 @@ const Cart = (props) => {
   };
 
   useEffect(() => {
-    if (!props.list.length) setTotal(undefined);
+    if (props.list.length === 0 || !props.list ){
+      setTotal(0.0);
+      return;
+    } 
 
     const totalValue = props.list.reduce(
       (sum, currentItem) =>
         (sum += currentItem.price * (currentItem.amount || 1)),
       0
     );
-    console.log(totalValue);
     setTotal(totalValue);
   }, [props.list]);
 
@@ -73,7 +75,7 @@ const Cart = (props) => {
           </button>
         </div>
         <div className="modal-list">
-          {props.list?.map((item, idx) => (
+          {props.list.length > 0 ? props.list?.map((item, idx) => (
             <div key={idx} className="list-item">
               <button
                 className="remove-item btn-close"
@@ -89,14 +91,14 @@ const Cart = (props) => {
               <input
                 type="number"
                 min="1"
-                defaultValue={item.amount || 1}
+                value={item.amount || 1}
                 onChange={(event) => changeAmount(idx, event.target.value)}
               />
               <p>&times;</p>
               <p>{item.name}</p>
               <p>{formatMoney(item.price * (item.amount || 1))}</p>
             </div>
-          ))}
+          )) : null}
         </div>
         <div className="list-total">
           <span>Total</span>

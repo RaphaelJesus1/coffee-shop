@@ -1,4 +1,4 @@
-import React, { ReactFragment, useState } from "react";
+import React, { ReactFragment, useEffect, useState } from "react";
 import "./App.css";
 import NavBar from "./components/navbar/navbar";
 import About from "./components/about/about";
@@ -7,40 +7,22 @@ import Cart from "./components/cart/cart";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [cartList, setCartList] = useState([
-    {
-      name: "Café coado",
-      imageUrl: "https://static.paodeacucar.com/img/uploads/1/1/656001.png",
-      price: 3.45,
-    },
-    {
-      name: "Croissant de chocolate",
-      imageUrl: "https://static.paodeacucar.com/img/uploads/1/1/656001.png",
-      price: 6.5,
-      amount: 5,
-    },
-    {
-      name: "Pão de batata",
-      imageUrl: "https://static.paodeacucar.com/img/uploads/1/1/656001.png",
-      price: 4.25,
-      amount: 2,
-    },
-    {
-      name: "Croissant de presunto e queijo",
-      imageUrl: "https://static.paodeacucar.com/img/uploads/1/1/656001.png",
-      price: 6.5,
-    },
-    {
-      name: "Chocolate quente",
-      imageUrl: "https://static.paodeacucar.com/img/uploads/1/1/656001.png",
-      price: 12.3192,
-      amount: 3,
-    },
-  ]);
+  const [cartList, setCartList] = useState([]);
+  const [numberOfItems, setNumberOfItems] = useState(0);
+
+  useEffect(() => {
+    if (cartList.length > 0) {
+      let totalNumberOfItems = 0;
+      cartList.forEach((item) => {
+        totalNumberOfItems = totalNumberOfItems + item.amount;
+      });
+      setNumberOfItems(totalNumberOfItems);
+    }
+  }, [cartList]);
 
   return (
     <React.Fragment>
-      <NavBar setIsModalOpen={setIsModalOpen} />
+      <NavBar setIsModalOpen={setIsModalOpen} numberOfItems={numberOfItems} />
       <About />
       <Cart
         isModalOpen={isModalOpen}
@@ -48,7 +30,7 @@ function App() {
         list={cartList}
         setList={setCartList}
       />
-      <ProductDisplay/>
+      <ProductDisplay listhandler={setCartList} cartList={cartList} />
     </React.Fragment>
   );
 }

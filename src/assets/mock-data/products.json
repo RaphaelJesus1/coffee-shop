@@ -2,28 +2,28 @@
   "success": true,
   "data": [
     {
-      "id": "p1",
+      "id": "1",
       "name": "Café gran expresso",
       "description": "Light and flavorful blend with cocoa and black pepper for an intense experience",
       "price": 29.9,
       "imageUrl": "product-images/image-gran-espresso.png"
     },
     {
-      "id": "p2",
+      "id": "2",
       "name": "Café Planalto",
       "description": "Brazilian dark roast with rich and velvety body, and hints of fruits and nuts",
       "price": 31.5,
       "imageUrl": "product-images/image-planalto.png"
     },
     {
-      "id": "p3",
+      "id": "3",
       "name": "Café Piccollo",
       "description": "Mild and smooth blend featuring notes of toasted almond and dried cherry",
       "price": 25.5,
       "imageUrl": "product-images/image-piccollo.png"
     },
     {
-      "id": "p4",
+      "id": "4",
       "name": "Café Danche",
       "description": "Ethiopian hand-harvested blend densely packed with vibrant fruit notes",
       "price": 27.6,
