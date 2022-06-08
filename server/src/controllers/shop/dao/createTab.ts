@@ -12,7 +12,7 @@ const createTab = async (name: string): Promise<number | null> => {
       { name }
     );
 
-    return res[0].insertedId || null;
+    return res[0].insertId || null;
   } catch (err: unknown) {
     return null;
   }

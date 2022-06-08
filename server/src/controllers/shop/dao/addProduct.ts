@@ -15,7 +15,7 @@ const addProduct = async (
       { productId, tabId }
     );
 
-    return res[0].insertedId || null;
+    return res[0].insertId || null;
   } catch (err: unknown) {
     return null;
   }

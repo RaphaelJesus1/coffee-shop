@@ -17,7 +17,7 @@ CREATE TABLE `coffee_shop`.`tab` (
 
 
 CREATE TABLE `coffee_shop`.`product_tab` (
-  `product_tab_id` INT NOT NULL,
+  `product_tab_id` INT NOT NULL AUTO_INCREMENT,
   `product_id` INT NOT NULL,
   `tab_id` INT NOT NULL,
   PRIMARY KEY (`product_tab_id`),
